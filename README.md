@@ -1,4 +1,5 @@
 # dromedary :dromedary_camel:
+[![Build Status](https://travis-ci.org/jbankes/dromedary.svg?branch=master)](https://travis-ci.org/jbankes/dromedary)
 Dromedary is a sample application created by [Stelligent](https://stelligent.com/) to be a very simple, lightweight yet useful application primarily used
 with AWS. Liatrio forked the application and removed the AWS functionality to
 demonstrate a working solution to our enterprise and non AWS customers. If you
