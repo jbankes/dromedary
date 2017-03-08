@@ -206,7 +206,7 @@ gulp.task('dist-app', function() {
       .pipe(install({production: true}));
 });
 
-gulp.task('package-app', ['lint-app','test','dist-app'], function () {
+gulp.task('package-app', ['lint-app','dist-app'], function () {
   return gulp.src(['!dist/app/package.json','!dist/app/**/aws-sdk{,/**}', 'dist/app/**/*'])
       .pipe(zip('lambda.zip'))
       .pipe(gulp.dest('dist'));
