@@ -7,9 +7,27 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Test') {
+    stage('Unit Test') {
       steps {
         sh 'gulp test'
+      }
+    }
+    stage('Convergence Testing') {
+      steps {
+        parallel (
+          firefox: {
+            echo "Firefox Testing"
+          }, 
+          Chrome: {
+            echo "Chrome Testing"
+          }, 
+          IE: {
+            echo "IE Testing"
+          }, 
+          Mobile: {
+            echo "Mobile Testing"
+          }
+        )
       }
     }
     stage('Build') {
