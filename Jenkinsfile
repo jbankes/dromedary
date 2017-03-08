@@ -2,9 +2,14 @@ pipeline {
   agent any
 
   stages {
+    stage('Initialize') {
+      steps {
+        sh 'npm install'
+      }
+    }
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh 'gulp test'
       }
     }
     stage('Build') {
