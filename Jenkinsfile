@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Unit Test') {
       steps {
-        sh 'gulp test'
+        sh 'npm test'
       }
     }
     stage('Convergence Testing') {
