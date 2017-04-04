@@ -6,11 +6,6 @@ pipeline {
   }
 
   stages {
-    stage('Initialize') {
-      steps {
-        sh 'npm install'
-      }
-    }
     stage('Unit Test') {
       steps {
         sh 'gulp test'
