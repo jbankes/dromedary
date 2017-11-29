@@ -72,7 +72,8 @@ describe("inMemoryStorage", function() {
     it("doesn't add two to the count per increment", function(){
       var color;
       for (color in this.colorCounts) {
-        assert.notEqual(backend.getCount(color), this.colorCounts[color]+2);
+        // assert.notEqual(backend.getCount(color), this.colorCounts[color]+2);
+        expect(backend.getCount(color)).to.not.equal(this.colorCounts[color]+2);
       } 
     });
   });
